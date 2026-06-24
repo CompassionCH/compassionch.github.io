@@ -1,0 +1,4 @@
+# transient CI assembly + local build artifacts
+_addons/
+tools/module-explorer/explorer.html
+**/__pycache__/

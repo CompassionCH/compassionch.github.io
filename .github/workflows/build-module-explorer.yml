@@ -1,0 +1,60 @@
+name: Build Module Explorer
+
+# Manual refresh only — trigger from the Actions tab ("Run workflow") or via the
+# "↻ refresh data" link on the explorer page. No schedule.
+on:
+  workflow_dispatch:
+    inputs:
+      odoo_version:
+        description: "Odoo series branch to map (e.g. 14.0 or 18.0)"
+        required: true
+        default: "14.0"
+
+permissions:
+  contents: write   # commit the regenerated data + built page back to the repo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout pages repo
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Assemble addons tree (@ ${{ github.event.inputs.odoo_version }})
+        run: |
+          python3 tools/module-explorer/ci/assemble_addons.py \
+            --version "${{ github.event.inputs.odoo_version }}" \
+            --dest "$RUNNER_TEMP/addons"
+
+      - name: Extract module data
+        run: |
+          python3 tools/module-explorer/extract.py \
+            --addons-root "$RUNNER_TEMP/addons" \
+            --out tools/module-explorer/modules.json
+
+      - name: Build served page
+        run: |
+          VER="${{ github.event.inputs.odoo_version }}"
+          if [ "$VER" = "14.0" ]; then OUT="module-explorer/index.html"; else OUT="module-explorer/$VER/index.html"; fi
+          echo "OUT=$OUT" >> "$GITHUB_ENV"
+          python3 tools/module-explorer/build_artifact.py \
+            --data tools/module-explorer/modules.json \
+            --template tools/module-explorer/index.html \
+            --versions tools/module-explorer/versions.json \
+            --out "$OUT"
+
+      - name: Commit & publish
+        run: |
+          git config user.name  "module-explorer-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add tools/module-explorer/modules.json "$OUT"
+          if git diff --cached --quiet; then
+            echo "No changes — nothing to publish."
+          else
+            git commit -m "Refresh module explorer (Odoo ${{ github.event.inputs.odoo_version }})"
+            git push
+          fi
