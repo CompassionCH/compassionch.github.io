@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-24T07:17:48+00:00",
-  "addons_root": "/Users/danielgergely/git/compassion/odoo/odoo14/addons-compassion-switzerland",
+  "generated_at": "2026-06-24T08:16:08+00:00",
+  "addons_root": "/home/runner/work/_temp/addons",
   "odoo_version": "14.0",
   "first_party_repos": [
     "compassion-accounting",
@@ -9,49 +9,39 @@
     "compassion-website"
   ],
   "stats": {
-    "total_discovered": 1287,
+    "total_discovered": 814,
     "first_party": 88,
-    "in_scope": 144,
-    "dependencies": 56,
-    "edges": 418,
-    "total_commits": 10528,
+    "in_scope": 129,
+    "dependencies": 41,
+    "edges": 382,
+    "total_commits": 10529,
     "modules_per_repo": {
       "compassion-accounting": 14,
       "account-analytic": 1,
       "account-financial-tools": 4,
       "bank-payment": 3,
       "account_ebics": 1,
-      "edi": 1,
-      "account-invoicing": 1,
-      "account-payment": 1,
-      "l10n-switzerland": 3,
       "compassion-switzerland": 24,
       "compassion-modules": 35,
       "account-reconcile": 1,
       "bank-statement-import": 4,
       "connector-telephony": 2,
       "server-tools": 3,
-      "server-auth": 1,
-      "community-data-files": 1,
-      "partner-contact": 6,
+      "partner-contact": 5,
       "report-print-send": 1,
       "crm": 3,
       "compassion-website": 15,
-      "hr-attendance": 1,
       "payroll": 2,
       "social": 4,
-      "paid-addons": 2,
-      "mis-builder": 1,
       "queue": 1,
       "reporting-engine": 1,
       "web": 4,
-      "geospatial": 1,
-      "website": 2
+      "geospatial": 1
     },
     "top_contributors": [
       {
         "name": "Emanuel Cino",
-        "commits": 6647
+        "commits": 6648
       },
       {
         "name": "NoeBerdoz",
@@ -659,35 +649,6 @@
       ]
     },
     {
-      "name": "account_invoice_export",
-      "repo": "edi",
-      "is_first_party": false,
-      "display_name": "Account Invoice Export",
-      "summary": "",
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.2.5",
-      "category": "Invoicing Management",
-      "author": "Camptocamp, Odoo Community Association (OCA)",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": null,
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": null,
-      "depends": [
-        "account",
-        "account_invoice_transmit_method",
-        "queue_job"
-      ],
-      "models": [],
-      "dependents": [
-        "account_invoice_export_grouped",
-        "ebill_postfinance"
-      ]
-    },
-    {
       "name": "account_invoice_export_grouped",
       "repo": "compassion-accounting",
       "is_first_party": true,
@@ -788,32 +749,6 @@
       "py_files": 5,
       "py_loc": 390,
       "dependents": []
-    },
-    {
-      "name": "account_invoice_pricelist",
-      "repo": "account-invoicing",
-      "is_first_party": false,
-      "display_name": "Account - Pricelist on Invoices",
-      "summary": "Add partner pricelist on invoices",
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.1.0",
-      "category": "Accounting & Finance",
-      "author": "GRAP,Therp BV,Tecnativa,Odoo Community Association (OCA)",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": null,
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": null,
-      "depends": [
-        "account"
-      ],
-      "models": [],
-      "dependents": [
-        "recurring_contract"
-      ]
     },
     {
       "name": "account_invoice_split_invoice",
@@ -1225,7 +1160,6 @@
       "dependents": [
         "account_banking_mandate",
         "account_payment_line_free",
-        "account_payment_return_import_pain_ch",
         "account_statement_completion",
         "gifts_payments",
         "invoice_restrictions",
@@ -1257,62 +1191,6 @@
       "dependents": [
         "account_payment_order",
         "recurring_contract"
-      ]
-    },
-    {
-      "name": "account_payment_return_import",
-      "repo": "account-payment",
-      "is_first_party": false,
-      "display_name": "Account Payment Return Import",
-      "summary": "This module adds a generic wizard to import payment returnfile formats. Is only the base to be extended by anothermodules",
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.0.2",
-      "category": "Accounting",
-      "author": "Tecnativa, Odoo Community Association (OCA)",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": "Mature",
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": null,
-      "depends": [
-        "account_payment_return"
-      ],
-      "models": [],
-      "dependents": [
-        "account_ebics_payment_return",
-        "account_payment_return_import_pain_ch"
-      ]
-    },
-    {
-      "name": "account_payment_return_import_pain_ch",
-      "repo": "l10n-switzerland",
-      "is_first_party": false,
-      "display_name": "Account Payment Return Import PAIN CH",
-      "summary": "\n        This addon allows to import payment returns from PAIN CH.",
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.0.0",
-      "category": null,
-      "author": "Odoo Community Association (OCA),Compassion CH",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": "Mature",
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": null,
-      "depends": [
-        "account_payment_return",
-        "account_payment_return_import",
-        "account_payment_return_import_iso20022",
-        "account_payment_order"
-      ],
-      "models": [],
-      "dependents": [
-        "account_ebics_payment_return"
       ]
     },
     {
@@ -2420,37 +2298,6 @@
       "dependents": []
     },
     {
-      "name": "auth_signup_verify_email",
-      "repo": "server-auth",
-      "is_first_party": false,
-      "display_name": "Verify email at signup",
-      "summary": "Force uninvited users to use a good email for signup",
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.0.1",
-      "category": "Authentication",
-      "author": "Antiun Ingeniería S.L., Tecnativa, Odoo Community Association (OCA)",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": null,
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": {
-        "python": [
-          "lxml",
-          "email_validator"
-        ]
-      },
-      "depends": [
-        "auth_signup"
-      ],
-      "models": [],
-      "dependents": [
-        "my_compassion"
-      ]
-    },
-    {
       "name": "bank_statement_import_compassion",
       "repo": "compassion-switzerland",
       "is_first_party": true,
@@ -2606,36 +2453,6 @@
       "dependents": []
     },
     {
-      "name": "base_iso3166",
-      "repo": "community-data-files",
-      "is_first_party": false,
-      "display_name": "ISO 3166",
-      "summary": null,
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.0.1",
-      "category": "Localization",
-      "author": "Tecnativa, Creu Blanca, Odoo Community Association (OCA)",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": "Production/Stable",
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": {
-        "python": [
-          "pycountry"
-        ]
-      },
-      "depends": [
-        "base"
-      ],
-      "models": [],
-      "dependents": [
-        "child_compassion"
-      ]
-    },
-    {
       "name": "base_location",
       "repo": "partner-contact",
       "is_first_party": false,
@@ -2706,7 +2523,7 @@
       "summary": null,
       "ai_summary": null,
       "description": null,
-      "version": "14.0.2.0.3",
+      "version": "14.0.2.0.2",
       "category": "Generic Modules/Base",
       "author": "Agile Business Group & Domsense, Pegueroles SCP, NaN, LasLabs, Camptocamp, Odoo Community Association (OCA), Open for Small Business Ltd",
       "maintainers": null,
@@ -6909,73 +6726,6 @@
       "dependents": []
     },
     {
-      "name": "ebill_postfinance",
-      "repo": "l10n-switzerland",
-      "is_first_party": false,
-      "display_name": "eBill Postfinance",
-      "summary": "Postfinance eBill integration",
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.1.0",
-      "category": null,
-      "author": "Camptocamp,Odoo Community Association (OCA)",
-      "maintainers": [
-        "TDu"
-      ],
-      "license": "AGPL-3",
-      "development_status": null,
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": {
-        "python": [
-          "zeep",
-          "ebilling_postfinance"
-        ]
-      },
-      "depends": [
-        "account",
-        "account_invoice_export",
-        "base_ebill_payment_contract",
-        "l10n_ch_qriban",
-        "queue_job",
-        "sale"
-      ],
-      "models": [],
-      "dependents": [
-        "account_invoice_export_grouped",
-        "ebill_postfinance_recipient_subscription"
-      ]
-    },
-    {
-      "name": "ebill_postfinance_recipient_subscription",
-      "repo": "l10n-switzerland",
-      "is_first_party": false,
-      "display_name": "E-Bill PostFinance Recipient Subscription",
-      "summary": "Module for e-bill recipient subscription via PostFinance website workflow.",
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.0.0",
-      "category": "Finance",
-      "author": "Compassion CH,Odoo Community Association (OCA)",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": null,
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": null,
-      "depends": [
-        "ebill_postfinance",
-        "website",
-        "base"
-      ],
-      "models": [],
-      "dependents": [
-        "my_compassion_switzerland"
-      ]
-    },
-    {
       "name": "firebase_connector",
       "repo": "compassion-modules",
       "is_first_party": true,
@@ -7696,33 +7446,6 @@
       "py_files": 5,
       "py_loc": 168,
       "dependents": []
-    },
-    {
-      "name": "hr_attendance_report_theoretical_time",
-      "repo": "hr-attendance",
-      "is_first_party": false,
-      "display_name": "Theoretical vs Attended Time Analysis",
-      "summary": null,
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.0.5",
-      "category": "Human Resources",
-      "author": "Tecnativa, Odoo Community Association (OCA)",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": null,
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": null,
-      "depends": [
-        "hr_attendance",
-        "hr_holidays_public"
-      ],
-      "models": [],
-      "dependents": [
-        "hr_switzerland"
-      ]
     },
     {
       "name": "hr_payroll_period",
@@ -9109,41 +8832,6 @@
       ]
     },
     {
-      "name": "mailchimp",
-      "repo": "paid-addons",
-      "is_first_party": false,
-      "display_name": "MailChimp Connector",
-      "summary": "Integrate & Manage MailChimp Operations from Odoo",
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.0.0",
-      "category": "Marketing",
-      "author": "CompassionCH",
-      "maintainers": [
-        "ecino"
-      ],
-      "license": "AGPL-3",
-      "development_status": "Production/Stable",
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": {
-        "python": [
-          "mailchimp_marketing"
-        ]
-      },
-      "depends": [
-        "mass_mailing",
-        "web_notify",
-        "queue_job"
-      ],
-      "models": [],
-      "dependents": [
-        "crm_switzerland",
-        "partner_compassion"
-      ]
-    },
-    {
       "name": "mass_mailing_partner",
       "repo": "social",
       "is_first_party": false,
@@ -9568,37 +9256,6 @@
       "dependents": [
         "child_compassion",
         "onramp_simulator"
-      ]
-    },
-    {
-      "name": "mis_builder",
-      "repo": "mis-builder",
-      "is_first_party": false,
-      "display_name": "MIS Builder",
-      "summary": "\n        Build 'Management Information System' Reports and Dashboards\n    ",
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.4.3.0",
-      "category": "Reporting",
-      "author": "ACSONE SA/NV, Odoo Community Association (OCA)",
-      "maintainers": [
-        "sbidoul"
-      ],
-      "license": "AGPL-3",
-      "development_status": "Production/Stable",
-      "installable": true,
-      "auto_install": false,
-      "application": true,
-      "external_dependencies": null,
-      "depends": [
-        "account",
-        "board",
-        "report_xlsx",
-        "date_range"
-      ],
-      "models": [],
-      "dependents": [
-        "mis_builder_spn_info"
       ]
     },
     {
@@ -16162,60 +15819,6 @@
       ]
     },
     {
-      "name": "partner_tag_smart_assignation",
-      "repo": "partner-contact",
-      "is_first_party": false,
-      "display_name": "Smart Tagger",
-      "summary": "Smart tagger, module to have smart tags who update themselves alone",
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.1.0",
-      "category": "Other",
-      "author": "Compassion CH, Odoo Community Association (OCA)",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": null,
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": null,
-      "depends": [
-        "base",
-        "hr",
-        "queue_job"
-      ],
-      "models": [],
-      "dependents": [
-        "partner_compassion"
-      ]
-    },
-    {
-      "name": "payment_postfinance_flex",
-      "repo": "paid-addons",
-      "is_first_party": false,
-      "display_name": "PostFinance Checkout Flex",
-      "summary": "Payment Acquirer: PostFinance Checkout Flex Implementation\n        Payment Acquirer: PostFinance Checkout Flex\n        More infos on integrated payment gateways,https://checkout.postfinance.ch/\n    ",
-      "ai_summary": null,
-      "description": "PostFinance Checkout Flex Payment Acquirer",
-      "version": "14.0.1.1",
-      "category": "Payment Gateway",
-      "author": "PIT Solutions AG",
-      "maintainers": null,
-      "license": "OPL-1",
-      "development_status": null,
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": null,
-      "depends": [
-        "account_payment"
-      ],
-      "models": [],
-      "dependents": [
-        "account_reconcile_checkout"
-      ]
-    },
-    {
       "name": "payroll_account",
       "repo": "payroll",
       "is_first_party": false,
@@ -16458,16 +16061,12 @@
       ],
       "models": [],
       "dependents": [
-        "account_invoice_export",
         "base_cron_monitor",
-        "ebill_postfinance",
-        "mailchimp",
         "message_center_compassion",
         "my_compassion",
         "my_compassion_native",
         "partner_auto_match",
         "partner_communication",
-        "partner_tag_smart_assignation",
         "recurring_contract",
         "sms_939"
       ]
@@ -17040,12 +16639,12 @@
         }
       ],
       "introduced": "2014-09-26",
-      "last_update": "2025-11-07",
-      "commit_count": 483,
+      "last_update": "2026-02-05",
+      "commit_count": 484,
       "top_contributors": [
         {
           "name": "Emanuel Cino",
-          "commits": 251
+          "commits": 252
         },
         {
           "name": "Albert Shenouda",
@@ -17065,7 +16664,7 @@
         }
       ],
       "py_files": 26,
-      "py_loc": 2747,
+      "py_loc": 2749,
       "dependents": [
         "account_reconcile_compassion",
         "partner_communication_reminder",
@@ -21978,7 +21577,6 @@
       "models": [],
       "dependents": [
         "hr_switzerland",
-        "mailchimp",
         "partner_segmentation",
         "sponsorship_compassion",
         "sponsorship_switzerland"
@@ -22132,33 +21730,6 @@
       ],
       "py_files": 6,
       "py_loc": 167,
-      "dependents": [
-        "my_compassion"
-      ]
-    },
-    {
-      "name": "website_crm_privacy_policy",
-      "repo": "website",
-      "is_first_party": false,
-      "display_name": "Website CRM privacy policy",
-      "summary": null,
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.0.0",
-      "category": "Website",
-      "author": "Trey, Tecnativa, Odoo Community Association (OCA)",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": null,
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": null,
-      "depends": [
-        "website_crm",
-        "website_legal_page"
-      ],
-      "models": [],
       "dependents": [
         "my_compassion"
       ]
@@ -22787,33 +22358,6 @@
       "py_loc": 2213,
       "dependents": [
         "muskathlon"
-      ]
-    },
-    {
-      "name": "website_legal_page",
-      "repo": "website",
-      "is_first_party": false,
-      "display_name": "Website Legal Page",
-      "summary": null,
-      "ai_summary": null,
-      "description": null,
-      "version": "14.0.1.0.0",
-      "category": "Website",
-      "author": "Tecnativa, LasLabs, Nicolas JEUDY, Odoo Community Association (OCA)",
-      "maintainers": null,
-      "license": "AGPL-3",
-      "development_status": null,
-      "installable": true,
-      "auto_install": false,
-      "application": false,
-      "external_dependencies": null,
-      "depends": [
-        "website"
-      ],
-      "models": [],
-      "dependents": [
-        "website_crm_privacy_policy",
-        "website_sponsorship"
       ]
     },
     {
@@ -23753,12 +23297,12 @@
     {
       "source": "account_ebics_payment_return",
       "target": "account_payment_return_import",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "account_ebics_payment_return",
       "target": "account_payment_return_import_pain_ch",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "account_fiscal_month",
@@ -23779,35 +23323,15 @@
       "source": "account_fiscal_year",
       "target": "date_range",
       "resolved": false
-    },
-    {
-      "source": "account_invoice_export",
-      "target": "account",
-      "resolved": false
-    },
-    {
-      "source": "account_invoice_export",
-      "target": "account_invoice_transmit_method",
-      "resolved": false
-    },
-    {
-      "source": "account_invoice_export",
-      "target": "queue_job",
-      "resolved": true
     },
     {
       "source": "account_invoice_export_grouped",
       "target": "account_invoice_export",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "account_invoice_export_grouped",
       "target": "ebill_postfinance",
-      "resolved": true
-    },
-    {
-      "source": "account_invoice_pricelist",
-      "target": "account",
       "resolved": false
     },
     {
@@ -23871,31 +23395,6 @@
       "resolved": false
     },
     {
-      "source": "account_payment_return_import",
-      "target": "account_payment_return",
-      "resolved": false
-    },
-    {
-      "source": "account_payment_return_import_pain_ch",
-      "target": "account_payment_return",
-      "resolved": false
-    },
-    {
-      "source": "account_payment_return_import_pain_ch",
-      "target": "account_payment_return_import",
-      "resolved": true
-    },
-    {
-      "source": "account_payment_return_import_pain_ch",
-      "target": "account_payment_return_import_iso20022",
-      "resolved": false
-    },
-    {
-      "source": "account_payment_return_import_pain_ch",
-      "target": "account_payment_order",
-      "resolved": true
-    },
-    {
       "source": "account_reconcile_checkout",
       "target": "account",
       "resolved": false
@@ -23903,7 +23402,7 @@
     {
       "source": "account_reconcile_checkout",
       "target": "payment_postfinance_flex",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "account_reconcile_compassion",
@@ -24011,11 +23510,6 @@
       "resolved": false
     },
     {
-      "source": "auth_signup_verify_email",
-      "target": "auth_signup",
-      "resolved": false
-    },
-    {
       "source": "bank_statement_import_compassion",
       "target": "base",
       "resolved": false
@@ -24051,11 +23545,6 @@
       "resolved": true
     },
     {
-      "source": "base_iso3166",
-      "target": "base",
-      "resolved": false
-    },
-    {
       "source": "base_location",
       "target": "base_address_city",
       "resolved": false
@@ -24088,7 +23577,7 @@
     {
       "source": "child_compassion",
       "target": "base_iso3166",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "child_compassion",
@@ -24273,7 +23762,7 @@
     {
       "source": "crm_switzerland",
       "target": "mailchimp",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "crowdfunding_compassion",
@@ -24326,51 +23815,6 @@
       "resolved": true
     },
     {
-      "source": "ebill_postfinance",
-      "target": "account",
-      "resolved": false
-    },
-    {
-      "source": "ebill_postfinance",
-      "target": "account_invoice_export",
-      "resolved": true
-    },
-    {
-      "source": "ebill_postfinance",
-      "target": "base_ebill_payment_contract",
-      "resolved": false
-    },
-    {
-      "source": "ebill_postfinance",
-      "target": "l10n_ch_qriban",
-      "resolved": false
-    },
-    {
-      "source": "ebill_postfinance",
-      "target": "queue_job",
-      "resolved": true
-    },
-    {
-      "source": "ebill_postfinance",
-      "target": "sale",
-      "resolved": false
-    },
-    {
-      "source": "ebill_postfinance_recipient_subscription",
-      "target": "ebill_postfinance",
-      "resolved": true
-    },
-    {
-      "source": "ebill_postfinance_recipient_subscription",
-      "target": "website",
-      "resolved": false
-    },
-    {
-      "source": "ebill_postfinance_recipient_subscription",
-      "target": "base",
-      "resolved": false
-    },
-    {
       "source": "firebase_connector",
       "target": "mass_mailing",
       "resolved": false
@@ -24389,16 +23833,6 @@
       "source": "gifts_payments",
       "target": "gift_compassion",
       "resolved": true
-    },
-    {
-      "source": "hr_attendance_report_theoretical_time",
-      "target": "hr_attendance",
-      "resolved": false
-    },
-    {
-      "source": "hr_attendance_report_theoretical_time",
-      "target": "hr_holidays_public",
-      "resolved": false
     },
     {
       "source": "hr_payroll_period",
@@ -24443,7 +23877,7 @@
     {
       "source": "hr_switzerland",
       "target": "hr_attendance_report_theoretical_time",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "iap_alternative_provider",
@@ -24566,21 +24000,6 @@
       "resolved": true
     },
     {
-      "source": "mailchimp",
-      "target": "mass_mailing",
-      "resolved": false
-    },
-    {
-      "source": "mailchimp",
-      "target": "web_notify",
-      "resolved": true
-    },
-    {
-      "source": "mailchimp",
-      "target": "queue_job",
-      "resolved": true
-    },
-    {
       "source": "mass_mailing_partner",
       "target": "mass_mailing",
       "resolved": false
@@ -24601,29 +24020,9 @@
       "resolved": true
     },
     {
-      "source": "mis_builder",
-      "target": "account",
-      "resolved": false
-    },
-    {
-      "source": "mis_builder",
-      "target": "board",
-      "resolved": false
-    },
-    {
-      "source": "mis_builder",
-      "target": "report_xlsx",
-      "resolved": false
-    },
-    {
-      "source": "mis_builder",
-      "target": "date_range",
-      "resolved": false
-    },
-    {
       "source": "mis_builder_spn_info",
       "target": "mis_builder",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "mis_builder_spn_info",
@@ -24748,12 +24147,12 @@
     {
       "source": "my_compassion",
       "target": "website_crm_privacy_policy",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "my_compassion",
       "target": "auth_signup_verify_email",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "my_compassion",
@@ -24808,7 +24207,7 @@
     {
       "source": "my_compassion_switzerland",
       "target": "ebill_postfinance_recipient_subscription",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "my_compassion_switzerland",
@@ -25043,7 +24442,7 @@
     {
       "source": "partner_compassion",
       "target": "mailchimp",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "partner_compassion",
@@ -25068,7 +24467,7 @@
     {
       "source": "partner_compassion",
       "target": "partner_tag_smart_assignation",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "partner_compassion",
@@ -25181,26 +24580,6 @@
       "resolved": true
     },
     {
-      "source": "partner_tag_smart_assignation",
-      "target": "base",
-      "resolved": false
-    },
-    {
-      "source": "partner_tag_smart_assignation",
-      "target": "hr",
-      "resolved": false
-    },
-    {
-      "source": "partner_tag_smart_assignation",
-      "target": "queue_job",
-      "resolved": true
-    },
-    {
-      "source": "payment_postfinance_flex",
-      "target": "account_payment",
-      "resolved": false
-    },
-    {
       "source": "payroll_account",
       "target": "payroll",
       "resolved": false
@@ -25243,7 +24622,7 @@
     {
       "source": "recurring_contract",
       "target": "account_invoice_pricelist",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "recurring_contract",
@@ -25591,16 +24970,6 @@
       "resolved": true
     },
     {
-      "source": "website_crm_privacy_policy",
-      "target": "website_crm",
-      "resolved": false
-    },
-    {
-      "source": "website_crm_privacy_policy",
-      "target": "website_legal_page",
-      "resolved": true
-    },
-    {
       "source": "website_crm_request",
       "target": "crm_request",
       "resolved": true
@@ -25633,11 +25002,6 @@
     {
       "source": "website_event_compassion",
       "target": "survey",
-      "resolved": false
-    },
-    {
-      "source": "website_legal_page",
-      "target": "website",
       "resolved": false
     },
     {
@@ -25688,7 +25052,7 @@
     {
       "source": "website_sponsorship",
       "target": "website_legal_page",
-      "resolved": true
+      "resolved": false
     },
     {
       "source": "website_switzerland",
